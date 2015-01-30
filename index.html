@@ -44,14 +44,22 @@
                 scene.add(light);// 追加光源到场景
               }
                //设置物体
-              var sphere;
+              var sphere,sphere2;
               function initObject(){  
                 sphere = new THREE.Mesh(
-                     new THREE.SphereGeometry(20,20),                //width,height,depth
+                     new THREE.SphereGeometry(20,18,6),                //width,height,depth
                      new THREE.MeshLambertMaterial({color: 0xff0000}) //材质设定
                 );
                 scene.add(sphere);
+
+                sphere2 = new THREE.Mesh(
+                     new THREE.CylinderGeometry(10,30,50,18,3),
+                     new THREE.MeshLambertMaterial({color: 0xff0000}) //材质设定
+                );
+                scene.add(sphere2);
+
                 sphere.position.set(0,0,0);
+                sphere2.position.set(50,10,10);
               }
               //执行
               function threeStart() {
@@ -68,7 +76,7 @@
             div#canvas3d{
                   border: none;
                   cursor: move;
-                  width: 1400px;
+                  width: 1300px;
                   height: 600px;
                   background-color: #EEEEEE;
                 }
