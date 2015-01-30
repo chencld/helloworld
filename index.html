@@ -13,8 +13,10 @@
                 height = document.getElementById('canvas3d').clientHeight;//获取画布「canvas3d」的高
                 renderer=new THREE.WebGLRenderer({antialias:true});//生成渲染器对象（属性：抗锯齿效果为设置有效）
                 renderer.setSize(width, height );//指定渲染器的高宽（和画布框大小一致）
-                document.getElementById('canvas3d').appendChild(renderer.domElement);//追加 【canvas】 元素到 【canvas3d】 元素中。
-                renderer.setClearColorHex(0xFFFFFF, 1.0);//设置canvas背景色(clearColor)
+                document.getElementById('canvas3d').appendChild(renderer.domElement);//追加 【canvas]元素到【canvas3d】 元素中。
+                //renderer.setClearColorHex(0xFFFFFF,1.0);//设置canvas背景色(clearColor)
+                renderer.setClearColor(0xFFFFFF,1.0);
+                //console.log(renderer);
               }
                //设置相机
               var camera;
